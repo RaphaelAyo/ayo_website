@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayo Raphael - Inspiring Through Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo-link">
+                <img src="logo.svg" alt="Ayo Raphael Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#music" class="nav-link">Music</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#tours" class="nav-link">Tours</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Inspiring Hearts Through Gospel Music</h1>
+            <p class="hero-subtitle">Spreading the message of hope, faith, and love</p>
+            <div class="hero-buttons">
+                <a href="#music" class="btn btn-primary">Listen Now</a>
+                <a href="#videos" class="btn btn-secondary">Watch Videos</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About the Artiste</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>🎵</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>With a passion for spreading the Gospel through music, this artiste has dedicated their life to creating inspirational songs that touch hearts and transform lives. Drawing from personal experiences and deep faith, each composition is a testament to God's love and grace.</p>
+                    <p>Having performed at numerous churches, concerts, and gospel events, the artiste continues to inspire audiences worldwide with powerful vocals and heartfelt lyrics that resonate with believers and seekers alike.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Songs Released</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100K+</h3>
+                            <p>Streams</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>200+</h3>
+                            <p>Live Performances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Music</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="music-grid">
+                <div class="spotify-player-wrapper">
+                    <h3 class="track-title">Exalted</h3>
+                    <p class="track-info">Single • 2024</p>
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/2dTxAMD4VU8Q8jfhfttAjB?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="spotify-player-wrapper">
+                    <h3 class="track-title">No other God like you</h3>
+                    <p class="track-info">Single • 2024</p>
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/5VbzTo39x1M6PO26jZxyGS?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player Modal -->
+    <div class="music-player-modal" id="music-player">
+        <div class="player-content">
+            <button class="close-player" id="close-player">&times;</button>
+            <div class="player-cover-large"></div>
+            <h3 id="player-song-title">Song Title</h3>
+            <div class="player-controls">
+                <button class="player-btn" id="prev-btn">⏮</button>
+                <button class="player-btn play-pause" id="play-pause-btn">▶</button>
+                <button class="player-btn" id="next-btn">⏭</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-display">
+                <span id="current-time">0:00</span>
+                <span id="total-time">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Music Videos</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-overlay">
+                            <svg viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Exalted - Official Video</h3>
+                        <p>2.5M views • 3 months ago</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-overlay">
+                            <svg viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>No other God like you - Live Performance</h3>
+                        <p>1.8M views • 5 months ago</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-overlay">
+                            <svg viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Acoustic Session</h3>
+                        <p>950K views • 8 months ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="tours">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Tours & Events</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="tours-list">
+                <div class="tour-item">
+                    <div class="tour-date">
+                        <span class="month">MAR</span>
+                        <span class="day">15</span>
+                    </div>
+                    <div class="tour-details">
+                        <h3>Gospel Concert 2024</h3>
+                        <p>City Convention Center, Ottawa</p>
+                    </div>
+                    <a href="#contact" class="btn btn-small">Get Tickets</a>
+                </div>
+                <div class="tour-item">
+                    <div class="tour-date">
+                        <span class="month">APR</span>
+                        <span class="day">22</span>
+                    </div>
+                    <div class="tour-details">
+                        <h3>Praise & Worship Night</h3>
+                        <p>Grace Cathedral, Ottawa</p>
+                    </div>
+                    <a href="#contact" class="btn btn-small">Get Tickets</a>
+                </div>
+                <div class="tour-item">
+                    <div class="tour-date">
+                        <span class="month">MAY</span>
+                        <span class="day">10</span>
+                    </div>
+                    <div class="tour-details">
+                        <h3>Easter Celebration Concert</h3>
+                        <p>Faith Arena, Toronto</p>
+                    </div>
+                    <a href="#contact" class="btn btn-small">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>For bookings, collaborations, or inquiries, please reach out through any of the channels below.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>admin@ayoraphaelmusic.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="icon">📱</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (343) 987-7792</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Ottawa, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ayoraphaelmusic/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                        <a href="https://www.instagram.com/ayoraphaelmusic" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                        <a href="https://www.youtube.com/@ayoraphaelmusic" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
+                        <a href="https://open.spotify.com/user/31de4pb5hvrkczwlxcmctnfrfaiy?si=ePL7Bbm1Tpi9SvIHPP9kdw" target="_blank" rel="noopener noreferrer" class="social-link">Spotify</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ayo Raphael. All rights reserved. | Spreading the Gospel through Music</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
