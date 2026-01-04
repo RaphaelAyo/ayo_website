@@ -4,26 +4,27 @@
       <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
     </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+      <feOffset dx="0" dy="1.5" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
-  <!-- Letter A - Modern geometric style -->
-  <path d="M 3 42 L 11 18 L 19 42 M 7 30 L 15 30" 
-        stroke="url(#logoGradient)" 
-        stroke-width="2.5" 
-        stroke-linecap="round" 
-        stroke-linejoin="round" 
-        fill="none"/>
-  
-  <!-- Letter R - Connected seamlessly -->
-  <path d="M 28 18 L 28 42 M 28 18 L 42 18 Q 46.5 18 46.5 22 Q 46.5 26 42 26 L 28 26 M 28 26 L 44 42" 
-        stroke="url(#logoGradient)" 
-        stroke-width="2.5" 
-        stroke-linecap="round" 
-        stroke-linejoin="round" 
-        fill="none"/>
-  
-  <!-- Text "Ayo Raphael" with elegant spacing -->
-  <text x="52" y="36" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="url(#logoGradient)" letter-spacing="0.5px">
+  <!-- Brand Name: Ayo Raphael -->
+  <text x="0" y="32" 
+        font-family="'Playfair Display', serif" 
+        font-size="24" 
+        font-weight="700" 
+        fill="url(#logoGradient)" 
+        letter-spacing="0.5px"
+        filter="url(#softShadow)">
     Ayo Raphael
   </text>
 </svg>
